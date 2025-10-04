@@ -23,9 +23,12 @@ const Camera = ({ onClose }) => {
 
     startCamera()
 
+    const videoElement = videoRef.current // Captura o valor da ref
+
+    // Função de limpeza
     return () => {
-      if (videoRef.current && videoRef.current.srcObject) {
-        const tracks = videoRef.current.srcObject.getTracks()
+      if (videoElement && videoElement.srcObject) {
+        const tracks = videoElement.srcObject.getTracks()
         tracks.forEach((track) => track.stop())
       }
     }
