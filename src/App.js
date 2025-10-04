@@ -6,7 +6,6 @@ import Map from "./components/Map"
 import Camera from "./components/Camera"
 import Legend from "./components/Legend"
 
-// Ícone para a localização do usuário
 const userLocationIcon = L.icon({
   iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
   iconSize: [25, 41],
